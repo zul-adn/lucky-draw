@@ -191,6 +191,18 @@ body {
         width: 60%;
         z-index: 2;
     }
+
+    .open{
+        font-weight: bold;
+        color: #04aa6d;
+        font-style: italic;
+    }
+
+    .close{
+        font-weight: bold;
+        color: red;
+        font-style: italic;
+    }
     
 
 }

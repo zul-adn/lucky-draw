@@ -30,9 +30,9 @@ function Rootapp({ datas, getAllDatas }) {
                     {datas.length !== 0 ?
                         datas.map((data, i) =>
                             <tr key={i}>
-                                <td >{data.name}</td>
-                                <td >{data.date}</td>
-                                <td >{data.nomor}</td>
+                                <td >{data.nama}</td>
+                                <td >{data.status === "1" ? <div><span className="open">Open</span></div> : <div><span className="close">Close</span></div>}</td>
+                                <td >{data.status === "1" ? data.nomor : <div><span className="close">Close</span></div>}</td>
                             </tr>
                         )
                         :
