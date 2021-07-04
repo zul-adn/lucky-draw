@@ -2,60 +2,55 @@ import React from 'react';
 import './style/style2.css';
 import { connect } from "react-redux";
 import {
-    getAllDatas
+    getAllDatas,
+    getDetails,
+    resetDetails
 } from './../store/app/action';
+import moment from 'moment';
+import 'moment/locale/id';  // without this line it didn't work
+
 
 import Bg from './assets/img/girl.png';
 import Logo from './assets/img/logo.png';
 
-function Rootapp({ datas, getAllDatas }) {
+moment.locale('id');
+
+function Rootapp({ datas, getAllDatas, getDetails, datas_detail, resetDetails }) {
+    const [isDetail, setIsDetail] = React.useState(false)
+    const [nama, setNama] = React.useState('')
 
     React.useEffect(() => {
         getAllDatas()
     }, [])
 
+    const getDetail = (name, id) => {
+        setNama(name)
+        setIsDetail(true)
+        getDetails(id)
+    }
+
+    const resetDetail = () => {
+        setIsDetail(false)
+        resetDetails()
+    }
+
     return (
         <div className="container">
-            {/* <div className="logo">
-                <img src={Logo} />
-            </div> */}
             <div className="bg">
                 <img src={Bg} />
             </div>
             <div className="main">
                 <div className="header">
-                    Hasil Togel
+                    {!isDetail ? "Hasil Togel" : nama}
                 </div>
-                <table className="tb">
-                    {datas.length !== 0 ?
-                        datas.map((data, i) =>
-                            <tr key={i}>
-                                <td >{data.nama}</td>
-                                <td >{data.status === "1" ? <div><span className="open">Open</span></div> : <div><span className="close">Close</span></div>}</td>
-                                <td >{data.status === "1" ? data.nomor : <div><span className="close">Close</span></div>}</td>
-                            </tr>
-                        )
-                        :
-                        <div>
-                            Loading...
-                        </div>
-                    }
-                </table>
-            </div>
-            {/* <div className="logo">
-                    <img src={Logo} />
-                </div>
-                <div className="bg">
-                    <img src={Bg} />
-                </div>
-                <div className="main">
+                {!isDetail ?
                     <table className="tb">
                         {datas.length !== 0 ?
                             datas.map((data, i) =>
-                                <tr key={i}>
-                                    <td style={{ fontWeight: 'bold' }}>{data.name}</td>
-                                    <td style={{ fontWeight: 'bold' }}>{data.date}</td>
-                                    <td style={{ fontWeight: 'bold', fontSize: 20 }}>{data.nomor}</td>
+                                <tr key={i} onClick={() => getDetail(data.nama, data.id)}>
+                                    <td >{data.nama}</td>
+                                    <td >{data.status === "1" ? <div><span className="open">Open</span></div> : <div><span className="close">Close</span></div>}</td>
+                                    <td >{data.status === "1" ? data.nomor : <div><span className="close">Close</span></div>}</td>
                                 </tr>
                             )
                             :
@@ -64,7 +59,31 @@ function Rootapp({ datas, getAllDatas }) {
                             </div>
                         }
                     </table>
-                </div> */}
+                    :
+                    <table className="tb">
+                        {datas_detail.length !== 0 ?
+                            datas_detail.map((data, i) =>
+                                <tr key={i} onClick={() => getDetail(data.nama)}>
+                                    <td >{moment(data.created_at).format("dddd, Do MMMM YYYY")}</td>
+                                    <td >{data.nomor}</td>
+                                </tr>
+                            )
+                            :
+                            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+                                Belum Ada Data
+                            </div>
+                        }
+                    </table>
+                }
+
+            </div>
+            {isDetail ?
+                <div className="back" onClick={resetDetail}>
+                    Kembali
+                </div>
+                :
+                ""
+            }
         </div>
     )
 }
@@ -72,12 +91,15 @@ function Rootapp({ datas, getAllDatas }) {
 const mapStateToProps = ({ app }) => {
     return {
         datas: app.datas,
+        datas_detail: app.datas_detail
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        getAllDatas: () => dispatch(getAllDatas())
+        getAllDatas: () => dispatch(getAllDatas()),
+        getDetails: (payload) => dispatch(getDetails(payload)),
+        resetDetails: () => dispatch(resetDetails())
     }
 };
 
