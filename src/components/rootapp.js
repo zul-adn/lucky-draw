@@ -46,7 +46,7 @@ function Rootapp({ datas, getAllDatas, getDetails, datas_detail, resetDetails })
                    All Days
                 </div>
                 {!isDetail ?
-                    <table className="tb">
+                    <table className="tb" id="table">
                         {datas.length !== 0 ?
                             datas.map((data, i) =>
                                 <tr key={i} onClick={() => getDetail(data.nama, data.id)}>
@@ -62,7 +62,7 @@ function Rootapp({ datas, getAllDatas, getDetails, datas_detail, resetDetails })
                         }
                     </table>
                     :
-                    <table className="tb">
+                    <table className="tb"  id="table">
                         {datas_detail.length !== 0 ?
                             datas_detail.map((data, i) =>
                                 <tr key={i} >
