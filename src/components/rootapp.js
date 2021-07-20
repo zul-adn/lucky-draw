@@ -6,27 +6,28 @@ import {
     getDetails,
     resetDetails
 } from './../store/app/action';
+import CountUp from 'react-countup';
 import moment from 'moment';
 import 'moment/locale/id';  // without this line it didn't work
 
-
-import Bg from './assets/img/girl.png';
+import Bg from './assets/img/logo.png';
 import Logo from './assets/img/logo.png';
 
 moment.locale('id');
 
 function Rootapp({ datas, getAllDatas, getDetails, datas_detail, resetDetails }) {
-    const [isDetail, setIsDetail] = React.useState(false)
+    const [isDetail, setIsDetail] = React.useState(true)
     const [nama, setNama] = React.useState('')
 
     React.useEffect(() => {
         getAllDatas()
+        getDetail()
     }, [])
 
     const getDetail = (name, id) => {
         setNama(name)
         setIsDetail(true)
-        getDetails(id)
+        getDetails('69')
     }
 
     const resetDetail = () => {
@@ -36,12 +37,13 @@ function Rootapp({ datas, getAllDatas, getDetails, datas_detail, resetDetails })
 
     return (
         <div className="container">
+          
             <div className="bg">
                 <img src={Bg} />
             </div>
-            <div className="main">
+            <div className="main  border-gradient-gold">
                 <div className="header">
-                    {!isDetail ? "Hasil Togel" : nama}
+                   All Days
                 </div>
                 {!isDetail ?
                     <table className="tb">
@@ -63,9 +65,15 @@ function Rootapp({ datas, getAllDatas, getDetails, datas_detail, resetDetails })
                     <table className="tb">
                         {datas_detail.length !== 0 ?
                             datas_detail.map((data, i) =>
-                                <tr key={i} onClick={() => getDetail(data.nama)}>
-                                    <td >{moment(data.created_at).format("dddd, Do MMMM YYYY")}</td>
-                                    <td >{data.nomor}</td>
+                                <tr key={i} >
+                                    <td >{moment(data.created_at).format("dddd")}</td>
+                                    <td >{moment(data.created_at).format("Do MMMM YYYY")}</td>
+                                    <td ><div className="numb-wrapper">
+                                            {data.nomor.split('').map((n, i) => 
+                                                  <div className="split" style={{ borderRight: data.nomor.split('').length === i+1 ? '' : '1px solid #fff' }}><CountUp end={n} duration={5} /> </div>
+                                            )}
+                                        </div>
+                                    </td>
                                 </tr>
                             )
                             :
@@ -77,13 +85,13 @@ function Rootapp({ datas, getAllDatas, getDetails, datas_detail, resetDetails })
                 }
 
             </div>
-            {isDetail ?
+            {/* {isDetail ?
                 <div className="back" onClick={resetDetail}>
                     Kembali
                 </div>
                 :
                 ""
-            }
+            } */}
         </div>
     )
 }

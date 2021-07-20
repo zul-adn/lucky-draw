@@ -8,6 +8,7 @@ export const getAllDatas = () => {
     return (dispatch) => {
         axios.get('https://dinartech.com/tog/public/api/getall')
             .then(response => {
+                console.log(response.data)
                 dispatch(storeDatas(response.data))
             })
 
