@@ -1,0 +1,67 @@
+.table-container{
+    border-radius: 8px;
+
+}
+
+table{
+    width: 100%;
+    color: #fff;
+    border-collapse: collapse;
+    border-radius: 30px;
+}
+
+table tr td{
+    padding: 3%;
+    border-top: none;
+    border-bottom: 2px solid #ffdde1; 
+}
+
+table tr td .content{
+    line-height: 150%;
+    padding: 4%;
+}
+
+table tr td .first{
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.title{
+    padding: 5%;
+}
+
+.price{
+    width: 20%;
+    padding: 2%;
+}
+
+.quota{
+    width: 21%;
+    padding: 2%;
+}
+
+.bg-white{
+    background-color: #fff;
+    color: black;
+}
+
+.bg-amour{
+    background-color: #ee5253;
+}
+
+.bg-pastel{
+    background-color: #ff6b6b;
+}
+
+.bg-nasu{
+    background-color: #5f27cd;
+}
+
+.bg-bluebell{
+    background-color: #341f97;
+}
+
+.bg-imperial{
+    background-color: #222f3e;
+}

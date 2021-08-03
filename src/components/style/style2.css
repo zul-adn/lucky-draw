@@ -3,13 +3,38 @@
 body {
     height: 100%;
     width: 100%;
-    overflow: hidden;
     background-color: #fff;
     font-family: "Quicksand", sans-serif;
 }
 
 #table tr:nth-child(even){background-color: rgb(0,0,0, 0.1); }
 
+@media screen and (min-width: 1024px) {
+    #root {
+        height: 100%;
+        padding: 0 25%;
+    }
+
+    .container {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 0;
+        background-color: #ffdde1;
+    }
+
+    section{
+        padding: 5%;
+    }
+    
+    .big-logo{
+        padding: 5%;
+    }
+
+    .big-logo img{
+       width: 100%;
+    }
+}
 
 @media screen and (min-width: 481px) and (max-width: 1024px) {
     #root {
@@ -18,128 +43,23 @@ body {
     }
 
     .container {
-        background-image: url("https://wallpapercave.com/wp/wp2234456.jpg");
-        height: 100vh;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        padding: 5%;
         z-index: 0;
+        background-color: #ffdde1;
     }
 
-    .main {
-        padding: 20px;
-        z-index: 99;
-        box-shadow: "0px 0px 15px rgba(0, 0, 0, 0.25)";
-        background-color: rgb(255, 255, 255, 0.9);
-        padding: 20px;
-        overflow: auto;
-        transition: linear 0.3s;
-        height: 65%;
-        border-radius: 10px;
-        border: 10px solid;
-        border-image-slice: 1;
-        border-width: 7px;
+    section{
+        padding: 5%;
+    }
+    
+    .big-logo{
+        padding: 5%;
     }
 
-    .numb-wrapper {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        border: 1px solid #000;
-        border-radius: 5px;
-        letter-spacing: 5px;
-        background-color: #000;
-    }
-
-    .numb-wrapper .split{
-        width: 25%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 3px;
-        color: #fff;
-    }
-
-    .border-gradient-gold {
-        border-image-source: linear-gradient(to top, #8f6B29, #FDE08D, #DF9F28);
-      }
-
-    .back {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 15px;
-        background-color: red;
-        color: white;
-        font-size: 20px;
-        font-weight: bold;
-        border-radius: 10px 10px;
-    }
-
-    .header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 15px;
-        background-color: black;
-        color: white;
-        font-size: 20px;
-        font-weight: bold;
-        border-radius: 10px 10px;
-    }
-
-    .tb {
-        border-collapse: collapse;
-        width: 100%;
-        margin-top: 20px;
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    .tb td,
-    .tb th {
-        padding: 8px;
-    }
-
-    .tb tr:hover {
-        background-color: #ddd;
-    }
-
-    .tb th {
-        padding-top: 12px;
-        padding-bottom: 12px;
-        text-align: left;
-        background-color: #04aa6d;
-        color: white;
-    }
-
-    .logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    .logo img {
-        position: absolute;
-        width: 80%;
-        z-index: 1;
-        top: 0px;
-    }
-
-    .bg {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    .bg img {
-        width: 100%;
-        z-index: 2;
-        margin-bottom: 20px;
+    .big-logo img{
+       width: 100%;
     }
 }
 
@@ -149,140 +69,21 @@ body {
     }
 
     .container {
-        background-image: url("https://wallpapercave.com/wp/wp2234456.jpg");
-        height: 100vh;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        padding: 4%;
         z-index: 0;
+        background-color: #ffdde1;
+    }
+    
+    section{
+        padding: 5%;
+    }
+    .big-logo{
+        padding: 5%;
     }
 
-    .main {
-        padding: 20px;
-        z-index: 99;
-        box-shadow: "0px 0px 15px rgba(0, 0, 0, 0.25)";
-        background-color: rgb(255, 255, 255, 0.9);
-        padding: 15px;
-        overflow: auto;
-        transition: linear 0.3s;
-        height: 60%;
-        border-radius: 10px;
-        border: 10px solid;
-        border-style:solid;
-        border-image-slice: 1;
-        border-width: 7px;
-    }
-
-    .numb-wrapper {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        border: 1px solid #000;
-        border-radius: 5px;
-        letter-spacing: 5px;
-        background-color: #000;
-    }
-
-    .numb-wrapper .split{
-        width: 25%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 3px;
-        color: #fff;
-    }
-
-    .border-gradient-gold {
-        border-image-source: linear-gradient(to top, #8f6B29, #FDE08D, #DF9F28);
-      }
-
-    .back {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 15px;
-        background-color: red;
-        color: white;
-        font-size: 16px;
-        font-weight: bold;
-        border-radius: 10px 10px;
-    }
-
-    .header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 15px;
-        background-color: black;
-        color: white;
-        font-size: 16px;
-        font-weight: bold;
-        border-radius: 10px 10px;
-    }
-
-    .tb {
-        border-collapse: collapse;
-        width: 100%;
-        margin-top: 20px;
-        font-size: 16px;
-        font-weight: bold;
-    }
-
-    .tb td,
-    .tb th {
-        padding: 8px;
-    }
-
-    .tb tr:hover {
-        background-color: #ddd;
-    }
-
-    .tb th {
-        padding-top: 12px;
-        padding-bottom: 12px;
-        text-align: left;
-        background-color: #04aa6d;
-        color: white;
-    }
-
-    .logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    .logo img {
-        position: absolute;
-        width: 80%;
-        z-index: 1;
-        top: 0px;
-    }
-
-    .bg {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    .bg img {
-        width: 100%;
-        z-index: 2;
-        margin-bottom: 10px;
-    }
-
-    .open {
-        font-weight: bold;
-        color: #04aa6d;
-        font-style: italic;
-    }
-
-    .close {
-        font-weight: bold;
-        color: red;
-        font-style: italic;
+    .big-logo img{
+       width: 100%;
     }
 }
