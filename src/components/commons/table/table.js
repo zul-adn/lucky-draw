@@ -8,7 +8,7 @@ export const table = (props) => {
         <div className="table-container ">
             <table>
                 <tr className="bg-imperial">
-                    <th colSpan={3} className="title">Prize details</th>
+                    <th colSpan={3} className="title br-top-8">Prize details</th>
                 </tr>
                 <tr className="bg-imperial">
                     <th className="price">Prize</th>
@@ -36,7 +36,7 @@ export const table = (props) => {
                     <td><div className="first">4</div></td>
                 </tr>
                 <tr className="bg-white">
-                    <td colSpan={3}>
+                    <td colSpan={3} className="br-bottom-8">
                         <div className="content">
                             *Grand Prize: iPhone 12 128 GB and SmarTone 5G SIM only plan (12-month, total monthly charge: $256)<br /><br />
                             **Second Prize: hotel staycation package at The Ritz Carlton, Hong Kong, Four Seasons Hotel Hong Kong, W Hong Kong, Alva Hotel by Royal, Hyatt Centric Victoria Harbour Hong Kong, The Royal Garden, Royal Plaza Hotel, Crowne Plaza Hong Kong Kowloon East, Royal Park Hotel, Holiday Inn Express Hong Kong Kowloon East, Noah Ark’s Hotel & Resort or Royal View Hotel<br /><br />
