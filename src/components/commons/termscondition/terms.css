@@ -1,0 +1,7 @@
+.terms-container{
+    height: 200px;
+    background-color: #fff;
+    padding: 2%;
+    overflow-y: auto;
+    border-radius: 8px;
+}

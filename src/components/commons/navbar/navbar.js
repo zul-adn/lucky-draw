@@ -5,10 +5,16 @@ import './navbar.css';
 import Logo from './../../assets/img/logo.png';
 
 export const Navbar = (props) => {
+
+    const showMenu = () => {
+        const menublock = document.querySelector('.menu-container')
+        menublock.style.display = 'block'
+    }
+
     return (
         <div className="navbar-container">
             <div className="item">
-                <i class='bx bx-menu'></i>
+                <i class='bx bx-menu' onClick={showMenu}></i>
             </div>
             <div className="item">
                 <img src={Logo} />

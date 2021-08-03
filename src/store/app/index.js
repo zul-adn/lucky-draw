@@ -1,6 +1,6 @@
 const initState = {
     datas:[],
-    datas_detail: []
+    isRegisterSubmit: true
 }
 
 export default (state = initState, action) => {
@@ -10,10 +10,10 @@ export default (state = initState, action) => {
                 ...state,
                 datas: action.datas
             }
-        case 'STORE_DATAS_DETAIL' : 
+        case 'REGISTER_SUBMIT' : 
             return{
                 ...state,
-                datas_detail: action.datas
+                isRegisterSubmit: true
             }
         case 'RESET_DETAIL' : 
             return{
