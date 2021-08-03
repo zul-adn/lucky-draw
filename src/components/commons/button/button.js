@@ -6,7 +6,7 @@ import './button.css';
 
 export const Button = (props) => {
     return (
-        <div className="btn">
+        <div className="btn" onClick={props.onClick}>
             {props.label}
         </div>
     )

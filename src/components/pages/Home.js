@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { registerSubmit } from './../../store/app/action';
+import { useHistory } from 'react-router-dom';
 
 import Button from './../commons/button/button';
 import Section from './../commons/section/section';
@@ -10,9 +11,10 @@ import Table from './../commons/table/table';
 import Logo from './../assets/img/big-logo.png'
 
 export const Home = ({registerSubmit}) => {
+    const history = useHistory();
 
     const submit = () => {
-        alert("hello")
+       history.push('/form')
     }
 
     return (
@@ -24,8 +26,8 @@ export const Home = ({registerSubmit}) => {
             </section>
             <section>
                 <Button
-                    label="Register"
-                    onClick={registerSubmit}
+                    label="Click here to register"
+                    onClick={submit}
                 />
             </section>
             <section>

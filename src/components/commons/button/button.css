@@ -4,12 +4,14 @@
     justify-content: center;
     align-items: center;
     font-size: 1rem;
-    padding:5% 0 5% 0;
+    padding:3% 0 3% 0;
     background-color: #ee9ca7;
     border-radius: 8px;
     border: 3px solid #fff;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     transition: linear 0.1s;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 
 
