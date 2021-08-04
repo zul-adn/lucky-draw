@@ -1,5 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import {
+
+    NavLink,
+
+} from "react-router-dom";
 
 import './menu.css';
 
@@ -11,12 +16,18 @@ export const menu = (props) => {
     }
 
     return (
-        <div className="menu-container">
+        <div className="menu-container" onClick={closeMenu}>
             <div className="menu-header">
-            <i class='bx bx-collapse' onClick={closeMenu}></i>
+                <i class='bx bx-collapse' onClick={closeMenu}></i>
             </div>
             <ul>
-                <li>Home Page</li>
+
+                <NavLink to="/">
+                    <li>
+                        Home Page
+                    </li>
+                </NavLink>
+
                 <li>FAQ</li>
                 <li>Terms & Conditions</li>
                 <li>Privacy Police Statement</li>
@@ -28,11 +39,11 @@ export const menu = (props) => {
 }
 
 const mapStateToProps = (state) => ({
-    
+
 })
 
 const mapDispatchToProps = {
-    
+
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(menu)
