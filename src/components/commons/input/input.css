@@ -3,7 +3,7 @@
     flex-direction: column;
 }
 
-.input-container input{
+.input-container .input{
     padding: 3%;
     border: 1.5px solid #ee9ca7;
     border-radius: 8px;
@@ -11,4 +11,14 @@
 
 .input-container label{
     margin-bottom: 10px;
+}
+
+.input-container .helper{
+    font-size: .8rem;
+    margin-left: 2%;
+    margin-top: 2%;
+    font-style: italic;
+    font-weight: bold;
+    display: none;
+    color: red;
 }

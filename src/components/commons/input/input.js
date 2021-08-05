@@ -12,7 +12,9 @@ export const input = (props) => {
                 placeholder={props.placeholder} 
                 value={props.value}
                 onChange={props.onChange} 
+                className="input"
             />
+            <div className="helper">This field cannot be empty</div>
         </div>
     )
 }

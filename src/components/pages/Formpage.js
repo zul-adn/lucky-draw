@@ -14,9 +14,10 @@ export const Formpage = (props) => {
     const [name, setName] = React.useState('')
 
     const submit = () => {
-        console.log(mobilePhone)
-        console.log(idCardNumber)
-        console.log(name)
+       if(mobilePhone === '' || idCardNumber === '' || name === ''){
+           document.querySelector('.input').style.border = '2px solid red'
+        document.querySelector('.helper').style.display = 'block'
+       }
     }
 
     const cancel = () => {
