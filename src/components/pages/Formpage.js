@@ -14,12 +14,22 @@ export const Formpage = (props) => {
     const [name, setName] = React.useState('')
 
     const submit = () => {
-       if(mobilePhone === '' || idCardNumber === '' || name === ''){
-           document.querySelector('.input').style.border = '2px solid red'
-            document.querySelector('.helper').style.display = 'block'
-       }else{
-           alert("Success ")
-       }
+        if (mobilePhone === '' || idCardNumber === '' || name === '') {
+            let input = document.querySelectorAll('.input')
+            let helper =  document.querySelectorAll('.helper')
+
+            for (let i = 0; i < input.length; i++) {
+                input[i].style.border = "2px solid red"
+            }
+
+            for (let i = 0; i < helper.length; i++) {
+                helper[i].style.display = "block"
+            }
+
+        } else {
+            alert("Success ")
+            // Add Action Here
+        }
     }
 
     const cancel = () => {
