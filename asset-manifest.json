@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/lucky-draw/static/css/main.1d864eae.chunk.css",
-    "main.js": "/lucky-draw/static/js/main.74a737c7.chunk.js",
-    "main.js.map": "/lucky-draw/static/js/main.74a737c7.chunk.js.map",
+    "main.css": "/lucky-draw/static/css/main.fc784ca6.chunk.css",
+    "main.js": "/lucky-draw/static/js/main.278ec309.chunk.js",
+    "main.js.map": "/lucky-draw/static/js/main.278ec309.chunk.js.map",
     "runtime-main.js": "/lucky-draw/static/js/runtime-main.756e977c.js",
     "runtime-main.js.map": "/lucky-draw/static/js/runtime-main.756e977c.js.map",
     "static/js/2.a66d09a0.chunk.js": "/lucky-draw/static/js/2.a66d09a0.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.68558107.chunk.js": "/lucky-draw/static/js/3.68558107.chunk.js",
     "static/js/3.68558107.chunk.js.map": "/lucky-draw/static/js/3.68558107.chunk.js.map",
     "index.html": "/lucky-draw/index.html",
-    "static/css/main.1d864eae.chunk.css.map": "/lucky-draw/static/css/main.1d864eae.chunk.css.map",
+    "static/css/main.fc784ca6.chunk.css.map": "/lucky-draw/static/css/main.fc784ca6.chunk.css.map",
     "static/js/2.a66d09a0.chunk.js.LICENSE.txt": "/lucky-draw/static/js/2.a66d09a0.chunk.js.LICENSE.txt",
     "static/media/big-logo.c3e753bb.png": "/lucky-draw/static/media/big-logo.c3e753bb.png",
     "static/media/logo.6ce24c58.svg": "/lucky-draw/static/media/logo.6ce24c58.svg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.756e977c.js",
     "static/js/2.a66d09a0.chunk.js",
-    "static/css/main.1d864eae.chunk.css",
-    "static/js/main.74a737c7.chunk.js"
+    "static/css/main.fc784ca6.chunk.css",
+    "static/js/main.278ec309.chunk.js"
   ]
 }
