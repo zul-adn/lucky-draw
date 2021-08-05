@@ -5,7 +5,6 @@
     align-items: center;
     font-size: 1rem;
     padding:3% 0 3% 0;
-    background-color: #ee9ca7;
     border-radius: 8px;
     border: 3px solid #fff;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -17,5 +16,5 @@
 
 .btn:hover{
     cursor: pointer;
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
