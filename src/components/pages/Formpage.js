@@ -16,7 +16,9 @@ export const Formpage = (props) => {
     const submit = () => {
        if(mobilePhone === '' || idCardNumber === '' || name === ''){
            document.querySelector('.input').style.border = '2px solid red'
-        document.querySelector('.helper').style.display = 'block'
+            document.querySelector('.helper').style.display = 'block'
+       }else{
+           alert("Success ")
        }
     }
 
