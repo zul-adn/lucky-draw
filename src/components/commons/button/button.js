@@ -6,7 +6,7 @@ import './button.css';
 
 export const Button = (props) => {
     return (
-        <div className="btn" onClick={props.onClick}>
+        <div className={props.type === 'primary' ? 'btn bg-primary' : 'btn bg-secondary'} onClick={props.onClick}>
             {props.label}
         </div>
     )

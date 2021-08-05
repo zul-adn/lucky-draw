@@ -7,7 +7,12 @@ export const input = (props) => {
     return (
         <div className="input-container">
             <label>{props.label}</label>
-            <input type={props.type} placeholder={props.placeholder} />
+            <input 
+                type={props.type} 
+                placeholder={props.placeholder} 
+                value={props.value}
+                onChange={props.onChange} 
+            />
         </div>
     )
 }

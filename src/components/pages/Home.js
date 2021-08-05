@@ -27,6 +27,7 @@ export const Home = ({registerSubmit}) => {
             <section>
                 <Button
                     label="Click here to register"
+                    type="primary"
                     onClick={submit}
                 />
             </section>
